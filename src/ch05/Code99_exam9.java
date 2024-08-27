@@ -39,6 +39,7 @@ public class Code99_exam9 {
 						System.out.println("점수["+i+"] : "+score[i]);
 					}
 				}else if (menuValue == 4) {
+
 					System.out.println();
 					
 				}else {
