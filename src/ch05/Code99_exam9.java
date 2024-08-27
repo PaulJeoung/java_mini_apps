@@ -19,27 +19,29 @@ public class Code99_exam9 {
 			
 			
 			int menuValue = Integer.parseInt(inputValue);
-			switch (menuValue) {
-			case 1:
-				System.out.println("학생수>");
-				break;
-			case 2:
-				System.out.println("점수입력>");
-				break;
-			case 3:
-				System.out.println("점수리스트>");
-				break;
-			case 4:
-				System.out.println("분석>");
-				break;
-
-			default:
-				System.out.println("선택> 5\n프로그램을 종료 합니다");
-				break;
-			}
-			
-		}
-		
+			if (menuValue >= 5) {
+				switch (menuValue) {
+				case 1:
+					System.out.println("학생수>");
+					break;
+				case 2:
+					System.out.println("점수입력>");
+					break;
+				case 3:
+					System.out.println("점수리스트>");
+					break;
+				case 4:
+					System.out.println("분석>");
+					break;
+	
+				default:
+					System.out.println("선택> 5\n프로그램을 종료 합니다");
+					run = false;
+					break;
+				}
+			} else {
+				System.out.println(menuValue + "는 잘못된 입력입니다. 프로그램을 종료 합니다");
+			}	
+		}	
 	}
-
 }
