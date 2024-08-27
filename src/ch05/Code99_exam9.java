@@ -8,7 +8,7 @@ public class Code99_exam9 {
 		
 		Scanner inputData = new Scanner(System.in);
 		boolean run = true;
-		int menuValue, students, totalScore, avg;
+		int menuValue, students;
 		int score[] = null;
 		
 		System.out.println("----------------------------------------------");
@@ -39,8 +39,19 @@ public class Code99_exam9 {
 						System.out.println("점수["+i+"] : "+score[i]);
 					}
 				}else if (menuValue == 4) {
-
-					System.out.println();
+					int max = 0;
+					for (int i=0; i<score.length;i++) {
+						if (score[i]>max) {
+							max = score[i];
+						}
+					}
+					int totalScore = 0;
+					for (int point : score) {
+						totalScore = totalScore+point;
+					}
+					double avg = (double) totalScore/score.length; 
+					System.out.println("최고점수 > "+max);
+					System.out.println("전체평균 > "+avg);
 					
 				}else {
 					run = false;
@@ -50,5 +61,3 @@ public class Code99_exam9 {
 			}
 		}	
 	}
-
-
