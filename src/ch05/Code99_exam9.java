@@ -8,40 +8,46 @@ public class Code99_exam9 {
 		
 		Scanner inputData = new Scanner(System.in);
 		boolean run = true;
+		int menuValue, students, totalScore, avg;
+		int score[] = null;
+		
+		System.out.println("----------------------------------------------");
+		System.out.println(" 1.학생수 | 2.점수입력 | 3.점수리스트 | 4.분석 | 5.종료 ");
+		System.out.println("----------------------------------------------");
 		
 		while(run) {
-			System.out.println("----------------------------------------------");
-			System.out.println(" 1.학생수 | 2.점수입력 | 3.점수리스트 | 4.분석 | 5.종료 ");
-			System.out.println("----------------------------------------------");
 			
 			System.out.println("선택 > ");
 			String inputValue = inputData.nextLine();
-			
-			
-			int menuValue = Integer.parseInt(inputValue);
-			if (menuValue >= 5) {
-				switch (menuValue) {
-				case 1:
-					System.out.println("학생수>");
-					break;
-				case 2:
-					System.out.println("점수입력>");
-					break;
-				case 3:
-					System.out.println("점수리스트>");
-					break;
-				case 4:
-					System.out.println("분석>");
-					break;
-	
-				default:
-					System.out.println("선택> 5\n프로그램을 종료 합니다");
+
+			menuValue = Integer.parseInt(inputValue);
+
+			if (menuValue == 1) {
+					System.out.println("학생수 > ");
+					inputValue = inputData.nextLine();
+					students = Integer.parseInt(inputValue);
+					score = new int[students];
+				
+				}else if (menuValue == 2) {
+					for(int i=0; i<score.length; i++) {
+						System.out.println("점수["+i+"] > ");
+						inputValue = inputData.nextLine();
+						score[i] = Integer.parseInt(inputValue);
+					}
+				}else if (menuValue == 3) {
+					for (int i=0; i<score.length; i++) {
+						System.out.println("점수["+i+"] : "+score[i]);
+					}
+				}else if (menuValue == 4) {
+					System.out.println();
+					
+				}else {
 					run = false;
+					System.out.println("프로그램을 종료 합니다");
 					break;
 				}
-			} else {
-				System.out.println(menuValue + "는 잘못된 입력입니다. 프로그램을 종료 합니다");
-			}	
+			}
 		}	
 	}
-}
+
+
