@@ -8,7 +8,7 @@ public class Code99_exam9 {
 		
 		Scanner inputData = new Scanner(System.in);
 		boolean run = true;
-		int menuValue, students;
+		int menuValue, students, sum = 0;
 		int score[] = null;
 		
 		System.out.println("----------------------------------------------");
@@ -41,9 +41,11 @@ public class Code99_exam9 {
 				}else if (menuValue == 4) {
 					int max = 0;
 					for (int i=0; i<score.length;i++) {
-						if (score[i]>max) {
-							max = score[i];
-						}
+						max = (max < score[i])? score[i]: max; // 삼항 연산자로 간결화
+						sum += score[i]; // for 문안에서 한번에 다 처리
+//						if (score[i]>max) {
+//							max = score[i];
+//						}
 					}
 					int totalScore = 0;
 					for (int point : score) {
