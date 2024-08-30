@@ -1,4 +1,4 @@
-package ch07;
+package ch07.extend_s;
 
 public class SmartPhoneRunner {
 
