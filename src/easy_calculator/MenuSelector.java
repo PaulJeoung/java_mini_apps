@@ -13,5 +13,6 @@ public class MenuSelector {
 	public final static int MINUS = 2;
 	public final static int MULTIPLE = 3;
 	public final static int DEVIDE = 4;
+	public final static int EXIT = 5;
 	
 }

@@ -8,8 +8,9 @@ public class Runner {
 	
 	public static void main(String[] args) {
 		
-		System calculator = new System();
+		Machine calculator = new Machine();
 		calculator.setPower(true);
+		calculator.runSystem();
 		
 //		String data = input.nextLine();
 		
