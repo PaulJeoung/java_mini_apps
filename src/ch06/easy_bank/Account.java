@@ -1,39 +1,33 @@
 package ch06.easy_bank;
 
 public class Account {
-	
-	private String accountNumer;
-	private String userName;
+
+	private String accountNo;
+	private String accountUser;
 	private int balance;
 	
-	public Account (String accountNumber, String userName, int balance) {
-		this.accountNumer = accountNumber;
-		this.userName = userName;
+	public Account (String accountNo, String accountUser, int balance) {
+		this.accountNo = accountNo;
+		this.accountUser = accountUser;
 		this.balance = balance;
 	}
 	
-	public String getAccountNumber() {
-		return accountNumer;
+	String getAccountNo() {
+		return accountNo;
 	}
-	
-	public void setAccountNumber(String accountNumber) {
-		this.accountNumer = accountNumber;
+	String getAccountUser() {
+		return accountUser;
 	}
-	
-	public String getUserName() {
-		return userName;
-	}
-	
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	
-	public int getBalance() {
+	int getBalance() {
 		return balance;
 	}
-	
-	public void setBalance(int balance) {
+	void setAccountNo(String accountNo) {
+		this.accountNo = accountNo;
+	}
+	void setAccountUser(String accountUser) {
+		this.accountUser = accountUser;
+	}
+	void setBalance(int balance) {
 		this.balance = balance;
 	}
-
 }
