@@ -54,30 +54,73 @@ public class BankApplication {
 	}
 	
 	private static void searchList() {
-		
-		for
-		
+		System.out.println("------------");
+		System.out.println("계좌 목록");
+		System.out.println("------------");
+		for (int i=0; i<clientArray.length; i++) {
+			Account account = clientArray[i];
+			if (account != null) {
+				System.out.print(account.getAccountNo() + "\t");
+				System.out.print(account.getAccountUser() + "\t");
+				System.out.print(account.getBalance() + "\t");
+				System.out.println();
+			} else {
+				break;
+			}
+		}
 	}
 	
 	private static void deposit() {
+		System.out.println("------------");
+		System.out.println("예금");
+		System.out.println("------------");
+		System.out.println("계좌번호 : ");
+		String accountNo = input.nextLine();
+		System.out.println("예금액 : ");
+		int balance = Integer.parseInt(input.nextLine());
 		
+		Account account = findAccout(accountNo);
+		
+		if(account != null) {
+			account.setBalance(account.getBalance()+balance);
+			System.out.println("결과 : 예금이 성공 하였습니다");
+		} else {
+			System.out.println("결과 :  예금에 실패 하였습니다");
+			return;
+		}
 	}
 	
 	private static void withdraw() {
+		System.out.println("------------");
+		System.out.println("출금");
+		System.out.println("------------");
+		System.out.println("계좌번호 : ");
+		String accountNo = input.nextLine();
+		System.out.println("예금액 : ");
+		int balance = Integer.parseInt(input.nextLine());
 		
+		Account account = findAccout(accountNo);
+		
+		if(account != null) {
+			account.setBalance(account.getBalance()-balance);
+			System.out.println("결과 : 풀금이 성공 하였습니다");
+		} else {
+			System.out.println("결과 :  출금에 실패 하였습니다");
+			return;
+		}
 	}
 	
 	private static Account findAccout(String accountNo) {
 		Account accout = null;
 		for (int i=0; i<clientArray.length; i++) {
 			if (clientArray[i] != null) {
-				String searchAccountNo = clientArray[i].getAccountNo();
-				if (searchAccountNo.equals(accountNo)) {
+				String searchNumber = clientArray[i].getAccountNo();
+				if (searchNumber.equals(accountNo)) {
 					accout = clientArray[i];
 					break;
 				}
 			}
 		}
-		return account;
+		return accout;
 	}
 }

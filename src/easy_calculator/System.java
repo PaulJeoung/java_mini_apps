@@ -7,6 +7,10 @@
 
 package easy_calculator;
 
+import easy_calculator.DisplayMessages;
+import easy_calculator.MenuSelector;
+import easy_calculator.Calculator;
+
 public class System {
 	
 	boolean power;
@@ -20,6 +24,12 @@ public class System {
 			return true;
 		} else {
 			return false;
+		}
+	}
+	
+	public void runSystem () {
+		if (power == true) {
+			
 		}
 	}
 	

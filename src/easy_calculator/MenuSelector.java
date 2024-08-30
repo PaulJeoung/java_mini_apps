@@ -9,7 +9,9 @@ package easy_calculator;
 
 public class MenuSelector {
 	
-	int choicePlus;
-	int choicePlusMinus;
-		
+	public final static int PLUS = 1;
+	public final static int MINUS = 2;
+	public final static int MULTIPLE = 3;
+	public final static int DEVIDE = 4;
+	
 }
