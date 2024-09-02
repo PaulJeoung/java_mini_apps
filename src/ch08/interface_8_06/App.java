@@ -24,6 +24,10 @@ public class App {
 		remoteControl.setMute(false);
 //		remoteControl.setVolume(volume1);
 		remoteControl.turnOff();
+		
+		System.out.println();
+		
+		RemoteControl.changeBattery(); // interface in static method called
 	}
 
 }
