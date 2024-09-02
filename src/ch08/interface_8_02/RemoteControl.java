@@ -1,4 +1,4 @@
-package ch08_interface_8_2;
+package ch08.interface_8_02;
 
 public interface RemoteControl {
 	// 추상 메서드
