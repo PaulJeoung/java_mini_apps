@@ -1,8 +1,6 @@
 package easy_calculator;
 
 import java.util.Scanner;
-import easy_calculator.DialogMessages;
-import easy_calculator.SystemMessages;
 
 public class InputReceiver {
 	private Scanner scanner; // 스캐너 필드 선언

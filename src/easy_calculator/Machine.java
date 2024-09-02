@@ -8,11 +8,10 @@
 package easy_calculator;
 
 //import java.util.Scanner;
-import easy_calculator.SystemMessages;
-import easy_calculator.MenuSelector;
-import easy_calculator.Calculator;
-import easy_calculator.InputReceiver;
-
+//import easy_calculator.SystemMessages;
+//import easy_calculator.MenuSelector;
+//import easy_calculator.Calculator;
+//import easy_calculator.InputReceiver;
 
 public class Machine {
 	
@@ -33,50 +32,41 @@ public class Machine {
 	public void runSystem () {
 		while (power) {
 			System.out.println(SystemMessages.valueOf("SYSTEM_ON"));
-			System.out.println(DialogMessages.valueOf("BOARD_LINE"));
-			System.out.println(DialogMessages.valueOf("MENU_SET"));
-			// System.out.println("1.덧셈 | 2.뺄셈 | 3.곱셉 | 4.나눗셈 | 5.종료");
+			System.out.println(SystemMessages.valueOf("BOARD_LINE"));
+			System.out.println(SystemMessages.valueOf("MENU_SET"));
 			
-			InputReceiver inputReceiver = new InputReceiver();
+			InputReceiver inputReceiver = new InputReceiver();			
 			
-			int selectNo = inputReceiver.receiveIntInput(DialogMessages.valueOf("MENU_SELECT"));
+			int selectNo = inputReceiver.receiveIntInput("선택 > ");
 			
-			switch (selectNo) {
-			
-			case MenuSelector.PLUS:
+			if (selectNo == MenuSelector.PLUS) {
 				System.out.println(selectNo + "번, 덧셈을 하겠습니다. 차례대로 2개의 숫자를 넣으세요");
-				double plusA = inputReceiver.receiveDoubleInput(DialogMessages.valueOf("INPUT_VALUE_1"));
-				double plusB = inputReceiver.receiveDoubleInput(DialogMessages.valueOf("INPUT_VALUE_1"));
+				double plusA = inputReceiver.receiveDoubleInput("숫자1 > ");
+				double plusB = inputReceiver.receiveDoubleInput("숫자2 > ");
 				
 				System.out.println(Calculator.plus(plusA, plusB));
-				
-			case MenuSelector.MINUS:
+			} else if (selectNo == MenuSelector.MINUS) {
 				System.out.println(selectNo + "번, 뺄셈을 하겠습니다. 차례대로 2개의 숫자를 넣으세요");
-				double minusA = inputReceiver.receiveDoubleInput(DialogMessages.valueOf("INPUT_VALUE_1"));
-				double minusB = inputReceiver.receiveDoubleInput(DialogMessages.valueOf("INPUT_VALUE_1"));
+				double minusA = inputReceiver.receiveDoubleInput("숫자1 > ");
+				double minusB = inputReceiver.receiveDoubleInput("숫자2 > ");
 				
 				System.out.println(Calculator.plus(minusA, minusB));
-				
-			case MenuSelector.MULTIPLE:
+			} else if (selectNo == MenuSelector.MULTIPLE) {
 				System.out.println(selectNo + "번, 곱셈을 하겠습니다. 차례대로 2개의 숫자를 넣으세요");
-				double multipleA = inputReceiver.receiveDoubleInput(DialogMessages.valueOf("INPUT_VALUE_1"));
-				double multipleB = inputReceiver.receiveDoubleInput(DialogMessages.valueOf("INPUT_VALUE_1"));
+				double multipleA = inputReceiver.receiveDoubleInput("숫자1 > ");
+				double multipleB = inputReceiver.receiveDoubleInput("숫자2 > ");
 				
 				System.out.println(Calculator.plus(multipleA, multipleB));
-			
-			
-			case MenuSelector.DEVIDE:
+			} else if (selectNo == MenuSelector.DEVIDE) {
 				System.out.println(selectNo + "번, 나눗셈을 하겠습니다. 차례대로 2개의 숫자를 넣으세요");
-				double devideA = inputReceiver.receiveDoubleInput(DialogMessages.valueOf("INPUT_VALUE_1"));
-				double devideB = inputReceiver.receiveDoubleInput(DialogMessages.valueOf("INPUT_VALUE_1"));
+				double devideA = inputReceiver.receiveDoubleInput("숫자1 > ");
+				double devideB = inputReceiver.receiveDoubleInput("숫자2 > ");
 				
 				System.out.println(Calculator.plus(devideA, devideB));
-				
-			case MenuSelector.EXIT:
+			} else if (selectNo == MenuSelector.EXIT) {
 				System.out.println(SystemMessages.valueOf("SYSTEM_OFF"));
 				power = false;
-				
-			default:
+			} else {
 				System.out.println(SystemMessages.valueOf("INVALID_INPUT"));
 			}
 		}
