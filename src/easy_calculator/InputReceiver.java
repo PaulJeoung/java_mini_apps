@@ -1,3 +1,10 @@
+/* 
+ * Author        : pj
+ * Class Name    : InputReceiver.java
+ * modified date : 2024-09-01
+ * description   : 입력값 처리
+ * */
+
 package easy_calculator;
 
 import java.util.Scanner;
@@ -19,7 +26,7 @@ public class InputReceiver {
 	public int receiveIntInput(String prompt) {
 		System.out.println(prompt);
 		while (!scanner.hasNextInt()) {
-			System.out.println(SystemMessages.valueOf("INVALID_INPUT_INT"));
+			System.out.println(SysMessage.valueOf("INVALID_INPUT_INT"));
 			scanner.next(); // 잘못된 입력을 버림
 			System.out.println(prompt);
 		}
@@ -30,7 +37,7 @@ public class InputReceiver {
 	public double receiveDoubleInput(String prompt) {
 		System.out.println(prompt);
 		while(!scanner.hasNextDouble()) {
-			System.out.println(SystemMessages.valueOf("INVALID_INPUT_DOUBLE"));
+			System.out.println(SysMessage.valueOf("INVALID_INPUT_DOUBLE"));
 			scanner.next();
 			System.out.println(prompt);
 		}

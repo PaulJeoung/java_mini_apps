@@ -1,6 +1,13 @@
+/* 
+ * Author        : pj
+ * Class Name    : FourBasicOperation.java
+ * modified date : 2024-09-01
+ * description   : 계산기의 연산을 처리
+ * */
+
 package easy_calculator;
 
-public enum SystemMessages {
+public enum SysMessage {
 	INVALID_INPUT("ERROR_01", "유효하지 않은 입력값 입니다"),
 	INCORRECT_RESULT("ERROR_02", "잘못된 계산 결과 입니다"),
 	INVALID_INPUT_INT("ERROR_11", "입력값은 INT 형이 아닙니다"),
@@ -22,7 +29,7 @@ public enum SystemMessages {
 	private final String code;
 	private final String message;
 	
-	private SystemMessages(String code, String message) {
+	private SysMessage(String code, String message) {
 		this.code = code;
 		this.message = message;
 	}
@@ -37,11 +44,6 @@ public enum SystemMessages {
 	
 	@Override
 	public String toString() {
-//		if (!equals(null)) {
-//			return String.format("%s", message);
-//		} else {
-//			return String.format("%s | %s", code, message);
-//		}
 		return String.format("%s | %s", code, message);
 	}
 	
