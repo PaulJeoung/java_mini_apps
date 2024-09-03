@@ -13,7 +13,7 @@
 6. 배열 문제 (배열크기를 사람이 입력 하고, 각 번지 만큼 사용자가 크기를 입력, 결과 출력 // 번지를 입력할 for 문  // 입력된 결과를 출력할 for문)
 	- ForLengthApp.java
 7. 사용자가 날짜를 입력하면, 날짜의 요일이 출력 (case문?), 윤년 검증 2000년 11월 18일은 토요일 입니다 출력
-	- DayFinderApp.java
+	- DayFinderApp.java, Day.java
 8. 상속과 관련된 문제 (부모, 자식 클래스 표현) main 클래스을 보고 부모, 자식 만들기 출력 결과에 특수 문자도 나옴
 	- AbstractApp.java, PointerTesterEx02.java 참고
 	
