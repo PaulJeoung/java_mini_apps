@@ -2,10 +2,10 @@ package ch99_midtest;
 
 public class Car {
 	
-	String name;
-	int width;
-	int height;
-	int length;
+	private String name;
+	private int width;
+	private int height;
+	private int length;
 	
 	public Car(String name, int width, int height, int length) {
 		this.name = name;
@@ -14,10 +14,10 @@ public class Car {
 		this.length = length;
 	}
 	
-	void putSpec() {
+	public void putSpec() {
 		System.out.println("이름 : " + name);
-		System.out.println("너비 : " + width);
-		System.out.println("높이 : " + height);
-		System.out.println("길이 : " + length);
+		System.out.println("너비 : " + width + "mm");
+		System.out.println("높이 : " + height + "mm");
+		System.out.println("길이 : " + length + "mm");
 		}
 }

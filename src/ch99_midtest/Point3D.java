@@ -8,7 +8,7 @@ public class Point3D extends Point2D {
         super(x, y);
         this.z = z;
     }
-    // settter
+    // setter
     public void setZ(int z) {
         this.z = z;
     }
