@@ -11,19 +11,28 @@ public class CalculatorApp {
 		int x = 0, y = 0;
 		String menu = null;
 		
-		// 두번째 계산 안되는 문제 해결 필요
+		// 두번째 계산 안되는 문제 해결 필요 -> 개행 처리 해서 해결
 		
 		while(true) {
-			System.out.println("메뉴 1.+ 2.- 3.* 4./ 5.exit[q]");
+			System.out.println("====================================");
+			System.out.println("[메뉴] 구하고자 하는 연산을 아래 기호로 넣어 주세요\n덧셈[+] 뺄셈[-] 곱셉[*] 나눗셈[/] 종료[q]");
 			
-			System.out.println("연산을 입력해 주세요 > ");
+			System.out.println("연산기호 입력 > ");
 			menu = scanner.nextLine();
+			
+			if (menu.equals(EXIT_STRING)) {
+				System.out.println("계산기를 종료 합니다");
+				calculatorApp = false;
+				break;
+			}
 			
 			System.out.println("1번째 숫자 입력 > ");
 			x = scanner.nextInt();
 			
 			System.out.println("2번째 숫자 입력 > ");
 			y = scanner.nextInt();
+			
+			scanner.nextLine();
 			
 			// 계산 출력 영역
 			if (menu.equals(PLUS_STRING)) {
@@ -34,9 +43,6 @@ public class CalculatorApp {
 				System.out.println("결과 > " + multiple(x, y));
 			} else if (menu.equals(DIVIDE_STRING)) {
 				System.out.println(divide(x, y));
-			} else if (menu.equals("결과 > " + EXIT_STRING)) {
-				System.out.println("계산기를 종료 합니다");
-				calculatorApp = false;
 			} else {
 				System.out.println("잘못된 입력입니다. 메뉴로 이동 합니다");
 			}	
