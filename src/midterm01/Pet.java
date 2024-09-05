@@ -13,16 +13,16 @@ public class Pet {
 	public String getPet(String pet) {
 		return this.pet;
 	}
-	public void setPet() {
-		this.pet = pet;
-	}
+//	public void setPet() {
+//		this.pet = pet;
+//	}
 	
 	public String getOwner(String owner) {
 		return this.owner;
 	}
-	public void setOwner() {
-		this.owner = owner;
-	}
+//	public void setOwner() {
+//		this.owner = owner;
+//	}
 	
 	public void introduce() {
 		System.out.println("내이름은 " + pet + " 입니다");

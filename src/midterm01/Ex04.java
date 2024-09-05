@@ -5,6 +5,7 @@ public class Ex04 {
 	public static void main(String[] args) {
 		
 		int a = 3;
+		// int x = (      ) * (2 + a);
 		int x = (a++) * (2 + a);
 		
 		System.out.println("a = " + a); // 4
